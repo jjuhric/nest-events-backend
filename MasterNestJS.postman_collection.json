@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "995f0838-8792-44dd-9079-58bc69aa9677",
+		"name": "MasterNestJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16886773"
+	},
+	"item": [
+		{
+			"name": "GET EVENTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseEventsUrl}}",
+					"host": [
+						"{{baseEventsUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE EVENTS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Events\",\n    \"description\": \"Test Event\",\n    \"when\": \"2024-10-12T05:00:00.000Z\",\n    \"address\": \"No more singing please\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseEventsUrl}}",
+					"host": [
+						"{{baseEventsUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UDPATE EVENTS",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Events - UPDATED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseEventsUrl}}/1",
+					"host": [
+						"{{baseEventsUrl}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE EVENTS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Events - UPDATED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseEventsUrl}}/1",
+					"host": [
+						"{{baseEventsUrl}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

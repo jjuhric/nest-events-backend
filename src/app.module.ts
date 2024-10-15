@@ -15,7 +15,8 @@ import { Event } from './event.entity';
     password: 'example',
     entities: [Event],
     synchronize: true // ONLY use this for development
-  })],
+  }), 
+  TypeOrmModule.forFeature([Event])],
   controllers: [AppController, EventsController],
   providers: [AppService],
 })
