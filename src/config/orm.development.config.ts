@@ -11,6 +11,6 @@ export default registerAs(
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     entities: [Event],
-    synchronize: true, // ONLY use this for development
+    synchronize: process.env.NODE_ENV === 'production' ? false : true, // ONLY use this for development
   }),
 );
