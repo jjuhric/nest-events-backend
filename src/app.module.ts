@@ -8,13 +8,13 @@ import { Event } from './event.entity';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'mysql',
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT),
-    database: process.env.DB_TARGET,
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'nest_events',
+    username: 'root',
+    password: 'example',
     entities: [Event],
-    synchronize: process.env.NODE_ENV === 'production' ? false : true, // ONLY use this for development
+    synchronize: true, // ONLY use this for development
   }),
   TypeOrmModule.forFeature([Event])],
   controllers: [AppController, EventsController],
