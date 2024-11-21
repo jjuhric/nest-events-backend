@@ -12,7 +12,7 @@ import { Event } from './event.entity';
     port: 3306,
     database: 'nest_events',
     username: 'root',
-    password: 'example',
+    password: 'example', // Change per env
     entities: [Event],
     synchronize: true, // ONLY use this for development
   }),
