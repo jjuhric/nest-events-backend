@@ -5,7 +5,6 @@ import { execSync } from 'child_process';
 export class AppService {
   private async getTemp() {
     const result = execSync('bash ~/check_temp.sh');
-    console.log(result.toString());
     return result.toString();
 
   }
