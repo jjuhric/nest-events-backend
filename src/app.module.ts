@@ -12,7 +12,7 @@ import { Event } from './event.entity';
     port: 3306,
     database: 'nest_events',
     username: 'root',
-    password: 'example', // Change per env
+    password: 'Jeffery#3218', // Change per env
     entities: [Event],
     synchronize: true, // ONLY use this for development
   }),
@@ -20,4 +20,4 @@ import { Event } from './event.entity';
   controllers: [AppController, EventsController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
