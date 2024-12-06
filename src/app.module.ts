@@ -2,8 +2,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { EventsController } from './events.controller';
-import { Event } from './event.entity';
+import { EventsModule } from './events/events.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -12,12 +11,12 @@ import { Event } from './event.entity';
     port: 3306,
     database: 'nest_events',
     username: 'root',
-    password: 'Jeffery#3218', // Change per env
+    password: 'example', // Change per env
     entities: [Event],
     synchronize: true, // ONLY use this for development
   }),
-  TypeOrmModule.forFeature([Event])],
-  controllers: [AppController, EventsController],
+    EventsModule],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule { }
