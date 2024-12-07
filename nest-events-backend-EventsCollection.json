@@ -1,111 +1,199 @@
 {
-	"info": {
-		"_postman_id": "995f0838-8792-44dd-9079-58bc69aa9677",
-		"name": "MasterNestJS",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16886773"
-	},
-	"item": [
-		{
-			"name": "GET EVENTS",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseEventsUrl}}",
-					"host": [
-						"{{baseEventsUrl}}"
-					]
-				}
-			},
-			"response": []
+	"collection": {
+		"info": {
+			"_postman_id": "995f0838-8792-44dd-9079-58bc69aa9677",
+			"name": "MasterNestJS",
+			"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+			"updatedAt": "2024-12-07T04:51:47.000Z",
+			"createdAt": "2024-10-13T05:12:41.000Z",
+			"lastUpdatedBy": "16886773",
+			"uid": "16886773-995f0838-8792-44dd-9079-58bc69aa9677"
 		},
-		{
-			"name": "CREATE EVENTS",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"Events\",\n    \"description\": \"Test Event\",\n    \"when\": \"2024-10-12T05:00:00.000Z\",\n    \"address\": \"No more singing please\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+		"item": [
+			{
+				"name": "GET EVENTS",
+				"id": "323bc814-3437-46af-baa6-a537844eb0f0",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "GET",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
 						}
+					},
+					"url": {
+						"raw": "{{baseUrl}}{{events}}",
+						"host": [
+							"{{baseUrl}}{{events}}"
+						]
 					}
 				},
-				"url": {
-					"raw": "{{baseEventsUrl}}",
-					"host": [
-						"{{baseEventsUrl}}"
-					]
-				}
+				"response": [],
+				"uid": "16886773-323bc814-3437-46af-baa6-a537844eb0f0"
 			},
-			"response": []
-		},
-		{
-			"name": "UDPATE EVENTS",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"Events - UPDATED\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			{
+				"name": "CREATE EVENTS",
+				"id": "36fbb5a4-22a6-44c7-8fe4-b2df7175a4fb",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "POST",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "{\n    \"name\": \"Events\",\n    \"description\": \"Test Event\",\n    \"when\": \"2024-10-12T05:00:00.000Z\",\n    \"address\": \"No more singing please\"\n}",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
 						}
+					},
+					"url": {
+						"raw": "{{baseEventsUrl}}",
+						"host": [
+							"{{baseEventsUrl}}"
+						]
 					}
 				},
-				"url": {
-					"raw": "{{baseEventsUrl}}/1",
-					"host": [
-						"{{baseEventsUrl}}"
-					],
-					"path": [
-						"1"
-					]
-				}
+				"response": [],
+				"uid": "16886773-36fbb5a4-22a6-44c7-8fe4-b2df7175a4fb"
 			},
-			"response": []
-		},
-		{
-			"name": "DELETE EVENTS",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"Events - UPDATED\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			{
+				"name": "UDPATE EVENTS",
+				"id": "171927a7-72ce-4bc4-9edd-5d99dbb62533",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "PATCH",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "{\n    \"name\": \"Johnny Appleseed\"\n}",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
 						}
+					},
+					"url": {
+						"raw": "{{baseEventsUrl}}/1",
+						"host": [
+							"{{baseEventsUrl}}"
+						],
+						"path": [
+							"1"
+						]
 					}
 				},
-				"url": {
-					"raw": "{{baseEventsUrl}}/1",
-					"host": [
-						"{{baseEventsUrl}}"
-					],
-					"path": [
-						"1"
-					]
-				}
+				"response": [],
+				"uid": "16886773-171927a7-72ce-4bc4-9edd-5d99dbb62533"
 			},
-			"response": []
-		}
-	]
+			{
+				"name": "DELETE EVENTS",
+				"id": "cb9adba1-771f-4e5c-b834-4064853887d0",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "DELETE",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "{\n    \"name\": \"Events - UPDATED\"\n}",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
+						}
+					},
+					"url": {
+						"raw": "{{baseEventsUrl}}/1",
+						"host": [
+							"{{baseEventsUrl}}"
+						],
+						"path": [
+							"1"
+						]
+					}
+				},
+				"response": [],
+				"uid": "16886773-cb9adba1-771f-4e5c-b834-4064853887d0"
+			},
+			{
+				"name": "GET TEST",
+				"id": "598ee48c-6f07-4a14-ae8f-077f33aa0485",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "GET",
+					"header": [],
+					"url": {
+						"raw": "{{baseUrl}}/test",
+						"host": [
+							"{{baseUrl}}"
+						],
+						"path": [
+							"test"
+						]
+					}
+				},
+				"response": [],
+				"uid": "16886773-598ee48c-6f07-4a14-ae8f-077f33aa0485"
+			},
+			{
+				"name": "GET RPI TEMP",
+				"id": "e8f7a7f5-8c3f-46ed-a806-0ee0240da457",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "GET",
+					"header": [],
+					"url": {
+						"raw": "{{baseUrl}}/temp",
+						"host": [
+							"{{baseUrl}}"
+						],
+						"path": [
+							"temp"
+						]
+					}
+				},
+				"response": [],
+				"uid": "16886773-e8f7a7f5-8c3f-46ed-a806-0ee0240da457"
+			},
+			{
+				"name": "GET RPI TEMP **ONLY FOR RPI USE**",
+				"id": "a284e0b4-aab7-48fd-8182-c04af85f5e2b",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "GET",
+					"header": [],
+					"url": {
+						"raw": "{{baseUrl}}/temp",
+						"host": [
+							"{{baseUrl}}"
+						],
+						"path": [
+							"temp"
+						]
+					}
+				},
+				"response": [],
+				"uid": "16886773-a284e0b4-aab7-48fd-8182-c04af85f5e2b"
+			}
+		]
+	}
 }
