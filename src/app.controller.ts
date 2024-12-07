@@ -9,4 +9,9 @@ export class AppController {
   getTemperature(): any {
     return this.appService.getTemperature();
   }
+
+  @Get('/test')
+  getTest() {
+    return this.appService.getTest();
+  }
 }

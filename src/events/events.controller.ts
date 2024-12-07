@@ -24,7 +24,7 @@ export class EventsController {
   constructor(
     @InjectRepository(Event)
     private readonly repository: Repository<Event>,
-  ) {}
+  ) { }
 
   @Get()
   async findAll() {

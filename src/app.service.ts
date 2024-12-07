@@ -3,16 +3,16 @@ import { execSync } from 'child_process';
 
 @Injectable()
 export class AppService {
-  private async getTemp() {
+  private getTemp(): string {
     const result = execSync('bash ~/check_temp.sh');
     return result.toString();
-
   }
 
-  async getTemperature() {
-    return await this.getTemp();
+  getTemperature(): string {
+    return this.getTemp();
   }
-  getBye(): string {
-    return "Bye";
+
+  getTest(): string {
+    return `Environment = ${process.env.NODE_ENV}`
   }
 }
